@@ -21,14 +21,15 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/prueba', function () {
-    return view('prueba.prueba');
-})->name('prueba');
-
 Route::middleware(['auth:sanctum','verified'])->group(function(){
-	Route::prefix('prototipo')->group(function(){
-		Route::name('prototipo.')->group(function (){
-			Route::get('/product',function(){
+	Route::prefix('prototipo')->group(function (){
+	  //Definimos el nombre del grupo de ruta
+	    Route::name('prototipo.')->group(function (){
+			Route::get('/show',function(){
+				return view('prototipo.show');
+		   })->name('show');
+	    //Definimos nuestra ruta
+	      Route::get('/product',function(){
 	           return view('prototipo.product');
 	      })->name('product');
           //Categoria Productos
@@ -47,7 +48,7 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
 	      Route::get('/photoProduct',function(){
 	           return view('prototipo.photoProduct');
 	      })->name('photoProduct');
-          //Cupon Producto
+          //Cupon Producto 
 	      Route::get('/cuponProduct',function(){
 	           return view('prototipo.cuponProduct');
 	      })->name('cuponProduct');
