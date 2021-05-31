@@ -6,6 +6,6 @@
     </x-slot>
 
     <x-containers.main>
-
+       
     </x-containers.main>
 </x-app-layout>
