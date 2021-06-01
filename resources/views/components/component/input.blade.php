@@ -1,10 +1,8 @@
+@props(['addon'])
+@php
+$classes = ($addon ?? false)
+            ? 'px-3 py-2 rounded-md shadow-sm border border-turquoise-light focus:outline-none focus:border-turquoise-dark text-xs sm:text-sm md:text-base'
+            : 'px-3 py-2 rounded-md shadow-sm border border-turquoise-light focus:outline-none focus:border-turquoise-dark focus:ring focus:ring-turquoise-light text-xs sm:text-sm md:text-base';
+@endphp
 <input 
-{{$attributes->merge([
-'class'=>
-'focus:ring-indigo-500 
-focus:border-indigo-500 
-flex-1 block w-full 
-rounded-none rounded-r-md 
-sm:text-sm border-gray-300
-bg-gray-300'
-])}}>
+{{$attributes->merge(['class'=> $classes])}}>
