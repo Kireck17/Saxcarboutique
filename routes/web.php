@@ -21,6 +21,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/prueba', function () {
+    return view('prueba.prueba');
+})->name('prueba');
+
+
+
 Route::middleware(['auth:sanctum','verified'])->group(function(){
 	Route::prefix('prototipo')->group(function (){
 	  //Definimos el nombre del grupo de ruta
@@ -104,6 +110,11 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
 	      Route::get('/paymentMethod',function(){
 	           return view('prototipo.paymentMethod');
 	      })->name('paymentMethod');
+
+	      Route::get('/ver',function(){
+	           return view('prototipo.ver');
+	      })->name('ver');
 		});
 	});
 });
+
