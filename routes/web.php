@@ -109,6 +109,9 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
 	      Route::get('/ver',function(){
 	           return view('prototipo.ver');
 	      })->name('ver');
+	      Route::get('/photo/edit',function(){
+	           return view('photo.edit');
+	      })->name('photo.edit');
 		});
 	});
 });
