@@ -21,7 +21,7 @@ class Card extends Component
     public $products;
 
     public function mount(){
-        $this->products = Products::all();
+        $this->products = Products::has('photo')->get();
     }
 
 
