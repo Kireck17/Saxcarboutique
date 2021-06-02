@@ -14,8 +14,8 @@
                 <div class="relative text-white px-6 pb-6 mt-6">
                     <span class="block opacity-75 -mb-1">{{__($product->mark()->first()->name)}}</span>
                     <div class="flex justify-between space-x-4">
-                        <span class="block font-semibold text-xl">{{__($product->name)}}</span>
-                        <span class=" bg-white rounded-full text-blue-500 text-xs font-bold px-3 py-2 leading-none flex items-center">${{__($product->price)}}</span>
+                        <div class="block font-semibold text-xl">{{__($product->name)}}</div>
+                        <div class=" bg-white rounded-full text-blue-500 text-xs font-bold px-3 py-2 leading-none flex items-center">${{__($product->price)}}</div>
                     </div>
                 </div>
             </div>
