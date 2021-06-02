@@ -6,13 +6,12 @@
     </x-slot>
 
     <x-containers.main>
-       
-    </x-containers.main>
-    <div class="py-12">
-            <div class="mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    @livewire('dasboard.card')
+        <div class="py-12">
+                <div class="mx-auto sm:px-6 lg:px-8">
+                    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                        @livewire('dasboard.card')
+                    </div>
                 </div>
-            </div>
-    </div> 
+        </div> 
+    </x-containers.main>
 </x-app-layout>
