@@ -35,7 +35,7 @@ class Products extends Model
     //alcanze con el modelo Photos
     public function photo()
     {
-        return $this->belongsTo(Photos::class);
+        return $this->belongsToMany(Photos::class,'photo_product','photo_id', 'product_id');
     }
 
     //alcanze con el modelo Photo_product
