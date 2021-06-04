@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-cian-dark">
+<nav x-data="{ open: false }" class="bg-white border-b border-turquoise-dark">
     {{-- Navegación normal --}}
     <div class="hidden lg:flex lg:justify-between lg:items-center lg:h-24">
         <div class="px-12">
@@ -6,7 +6,24 @@
                 <img class="h-16 w-auto" src="{{asset('storage/logos/originalsaxcar.png')}}" alt="">
             </a>
         </div>
-        <div class="flex">
+        <div class="hidden space-x-8 md:-my-px md:ml-10 md:flex">
+            <x-nav-links.normal href="/" :active="request()->routeIs('intro')">
+                {{__('Inicio')}}
+            </x-nav-links.normal>
+            <x-nav-links.normal href="/" :active="request()->routeIs('prototipo.ver')">
+                {{__('Lorem ipsum')}}
+            </x-nav-links.normal>
+            <x-nav-links.normal href="/" :active="request()->routeIs('prototipo.category')">
+                {{__('amet consectetur')}}
+            </x-nav-links.normal>
+            <x-nav-links.normal href="/" :active="request()->routeIs('prototipo.mark')">
+                {{__('non laudantium')}}
+            </x-nav-links.normal>
+            <x-nav-links.normal href="/" :active="request()->routeIs('photo.edit')">
+                {{__('ab perspiciatis')}}
+            </x-nav-links.normal>
+        </div>
+        {{--<div class="flex">
             <x-component.select class="rounded-r-none border-r-0" :addon="true">
                 <x-slot name="default">
                     Todas las categorias...
@@ -19,7 +36,7 @@
             <x-component.button-yellow class="rounded-l-none border-l-0">
                 <i class="fas fa-search"></i>
             </x-component.button-yellow>
-        </div>
+        </div>--}}
         @auth
             <div class="hidden sm:flex sm:items-center sm:mr-6">
                 <!-- Teams Dropdown -->
@@ -147,7 +164,7 @@
             </div>
             <!-- Hamburger -->
             <div class="mx-6 flex items-center lg:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-cian-light focus:outline-none focus:bg-cian-light transition duration-150 ease-in-out">
+                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-turquoise-dark focus:outline-none focus:text-turquoise-light">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -155,7 +172,7 @@
                 </button>
             </div>
         </div>
-        <div class="flex justify-center items-center py-3">
+        {{--<div class="flex justify-center items-center py-3">
             <x-component.select class="w-6/12 py-1 rounded-r-none border-r-0" :addon="true">
                 <x-slot name="default">
                     Todas las categorias...
@@ -168,10 +185,10 @@
             <x-component.button-yellow class="w-1/12 h-full text-sm rounded-l-none border-l-0">
                 <i class="fas fa-search"></i>
             </x-component.button-yellow>
-        </div>
+        </div>--}}
     </div>
     {{-- Menú de hamburguesa --}}
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden border-b-2 border-cian-dark">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="flex flex-col justify-start space-y-0.5">
             <x-nav-links.responsive href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Tablero') }}
