@@ -14,16 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('prototipo.intro');
 });
 
+//Route::middleware(['auth:sanctum', 'verified'])->get('/welcome', function () {
+  // return view('prototipo.intro');
+//})->name('welcome');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('prototipo.intro');
 })->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/prueba', function () {
     return view('prueba.prueba');
 })->name('prueba');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/cartas', function () {
+    return view('dashboard');
+})->name('cartas');
 
 
 
@@ -109,6 +117,9 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
 	      Route::get('/ver',function(){
 	           return view('prototipo.ver');
 	      })->name('ver');
+	      Route::get('/photo/edit',function(){
+	           return view('photo.edit');
+	      })->name('photo.edit');
 		});
 	});
 });
