@@ -20,7 +20,7 @@ module.exports = {
                 'cian-light': '#87bbc8',
                 'turquoise-dark': '#122e31',
                 'turquoise-light': '#365558',
-            }
+            },
         },
     },
 

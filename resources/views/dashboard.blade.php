@@ -6,6 +6,7 @@
     </x-slot>
 
     <x-containers.main>
-       @livewire('dasboard.card')
+        @livewire('dasboard.slider')
+        @livewire('dasboard.card')
     </x-containers.main>
 </x-app-layout>
