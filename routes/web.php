@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('prototipo.intro');
-});
+})->name('intro');
 
 //Route::middleware(['auth:sanctum', 'verified'])->get('/welcome', function () {
   // return view('prototipo.intro');

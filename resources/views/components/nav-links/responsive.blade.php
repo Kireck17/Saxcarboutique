@@ -2,8 +2,8 @@
 
 @php
 $classes = ($active ?? false)
-            ? 'bg-gray-100 py-3 px-6 flex justify-between items-center font-bold text-base text-yellow-dark border-l-8 border-yellow-dark'
-            : 'bg-white py-3 px-6 flex justify-between items-center font-bold text-base';
+            ? 'bg-white py-3 px-6 flex justify-between items-center font-bold text-base text-turquoise-dark border-l-8 border-turquoise-dark'
+            : 'bg-white py-3 px-6 flex justify-between items-center font-bold text-base text-turquoise-dark';
 @endphp
 
 <a {{ $attributes->merge(['class' => $classes]) }}>
